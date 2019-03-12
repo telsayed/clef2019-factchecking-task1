@@ -157,7 +157,7 @@ Lab Organizers:
 * Alberto Barrón-Cedeño, Qatar Computing Research Institute, HBKU <br/>
 * Pepa Atanasova, University of Copenhagen <br/>
 * Mitra Mohtarami, MIT <br/>
-* Georgi Karadzhov, University of Copenhagen <br/>
+* Georgi Karadzhov, Sofia University <br/>
 * Spas Kyuchukov, Sofia University <br/>
 * Giovanni Da San Martino, Qatar Computing Research Institute, HBKU
 
