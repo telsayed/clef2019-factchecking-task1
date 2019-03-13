@@ -160,6 +160,8 @@ Lab Organizers:
 * Georgi Karadzhov, Sofia University <br/>
 * Spas Kyuchukov, Sofia University <br/>
 * Giovanni Da San Martino, Qatar Computing Research Institute, HBKU
+* Tamer Elsayed, Qatar University
+* 
 
 
 Task website: https://sites.google.com/view/clef2019-checkthat/
