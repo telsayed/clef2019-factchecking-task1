@@ -1,4 +1,4 @@
-# CLEF2019--CheckThat! Task 1
+# CLEF2019-CheckThat! Task 1
 This repository contains the _dataset_ for the [CLEF2019-CheckThat! task 1](https://sites.google.com/view/clef2019-checkthat/).
 
 It also contains the _format checker, scorer and baselines_ for the task.
@@ -8,13 +8,13 @@ FCPD corpus for the CLEF-2019 LAB on "Automatic Identification and Verification 
 Version 1.0: March 12, 2019 (TRIAL)
 ````
 
-This file contains the basic information regarding the CLEF2018-factcheck
-on Fact Checking Political Debates dataset provided for the CLEF-2018 Lab
-on "Automatic Identification and Verification of Claims in Political Debates".
-The current TRIAL version (1.0, January 25, 2018) corresponds to the 
-release of a part of the training data set.
-The full training sets and the test sets will be provided in future versions.
-All changes and updates on these data sets are reported in Section 1 of this document.
+This file contains the basic information regarding the CLEF2019-CheckThat! Task 1
+on Check-Worthiness estimation dataset provided for the CLEF2019-CheckThat Lab
+on "Automatic Identification and Verification of Claims".
+The current TRIAL version (1.0, March 12, 2019) corresponds to the release of a 
+part of the training data set.
+The test set will be provided in future versions.
+All changes and updates on these data sets and tools are reported in Section 1 of this document.
 
 __Table of contents:__
 * [List of Versions](#list-of-versions)
@@ -33,21 +33,21 @@ __Table of contents:__
 
 ## List of Versions
 
-* __v1.0 [2019/03/12]__ -  TRIAL data. Partial distribution of the training data for task 1: It contains examples extracted from debates, speeches, press conferences, etc. 
-
+* __v1.0 [2019/03/12]__ -  TRIAL data. The training data for task 1 contains 19 fact-checked documents - debates, speeches, press conferences, etc, analysed by factcheck.org. 
 
 ## Contents of the Distribution v1.0
 
 We provide the following files:
 
 - Main folder: [data](data)
-
+  - Subfolder [/training](data/training) <br/>
+   Contains all training data released with the version 1.0
+    
   * [README.md](README.md) <br/>
     this file
-
-  - Subfolder [/training](data/training) <br/>
-    contains all training data released with the version 1.0
-    
+  
+  - [clef18.bib](clef18.bib) - Bibliography of the overview papers from CLEF-2018 Shared task.
+  
 ## Subtask 1 : __Check-Worthiness__. 
 
 Predict which claim in a political debate should be prioritized for fact-checking. In particular, given a debate, speech or a press conference the goal is to produce a ranked list of its sentences based on their worthiness for fact checking.
@@ -86,7 +86,7 @@ For this task, the expected results file is a list of claims with the estimated 
     Each line contains a tab-separated line with:
 >line_number <TAB> score
 
-Where _line_number_ is the number of the claim in the debate and _score_ is a number indicating the priority of the claim for fact-checking. For example:
+Where _line_number_ is the number of the claim in the debate and _score_ is a number, indicating the priority of the claim for fact-checking. For example:
 >1	0.9056 <br/>
 >2	0.6862 <br/>
 >3	0.7665 <br/>
@@ -108,7 +108,7 @@ Otherwise the scorer will not score this result file.
 The checker for the subtask is located in the [format_checker](format_checker) module of the project.
 The format checker verifies that your generated results file complies with the expected format.
 To launch it run: 
-> python3 task1.py --pred_file_path=<path_to_your_results_file> <br/>
+> python3 format_checker/main.py --pred_file_path=<path_to_your_results_file> <br/>
 
 `run_format_checker.sh` includes examples of the output of the checker when dealing with an ill-formed results file. 
 Its output can be seen in [run_format_checker_out.txt](format_checker/run_format_checker_out.txt)
@@ -117,7 +117,7 @@ The checks for completness (if the result files contain all lines / claims) is N
 ## Scorers 
 
 Launch the scorers for the task as follows:
-> python3 task1.py --gold_file_path="<path_gold_file_1, path_to_gold_file_k>" --pred_file_path="<predictions_file_1, predictions_file_k>" <br/>
+> python3 scorer/main.py --gold_file_path="<path_gold_file_1, path_to_gold_file_k>" --pred_file_path="<predictions_file_1, predictions_file_k>" <br/>
 
 Both `--gold_file_path` and `--pred_file_path` take a single string that contains a comma separated list of file paths. The lists may be of arbitraty positive length (so even a single file path is OK) but their lengths must match.
 
@@ -133,16 +133,12 @@ They also handle checking if the provided predictions file contains all lines / 
 For Task 1 (ranking): R-Precision, Average Precision, Recipocal Rank, Precision@k and means of these over multiple debates.
 **The official metric for task1, that will be used for the competition ranking is the Mean Average Precision (MAP)**
 
-For Task 2 (classification): Mean Absolute Error (MAE), Macro-average MAE, Accuracy, Macro-average F1, Macro-average Recall (+ confusion matrix).
-**The official metric for task2, that will be used for the competition ranking is the Mean Absolute Error (MAE)**
-
 ## Baselines
 
-The [baselines](/baselines) module contains a random and a simple ngram baseline for each of the tasks and each of the languages.
+The [baselines](/baselines) module contains a random and a simple ngram baseline for the task.
 
-If you execute any of the scripts, both of the baselines will be trained on the 1st Presidential and the Vice-Presidential debates and evaluated on the 2nd Presidential debate.
+If you execute main.py, both of the baselines will be trained on all but the 20190108_oval_office.tsv debate and evaluated on the 20190108_oval_office.tsv debate.
 The performance of both baselines will be displayed.
- 
 
 ## Licensing
 
@@ -153,16 +149,16 @@ The performance of both baselines will be displayed.
 
 Lab Organizers:
 
-* Preslav Nakov, Qatar Computing Research Institute, HBKU <br/>
-* Alberto Barrón-Cedeño, Qatar Computing Research Institute, HBKU <br/>
 * Pepa Atanasova, University of Copenhagen <br/>
+* Preslav Nakov, Qatar Computing Research Institute, HBKU <br/>
 * Mitra Mohtarami, MIT <br/>
 * Georgi Karadzhov, Sofia University <br/>
 * Spas Kyuchukov, Sofia University <br/>
-* Giovanni Da San Martino, Qatar Computing Research Institute, HBKU
-* Tamer Elsayed, Qatar University
-* 
-
+* Alberto Barrón-Cedeño, Qatar Computing Research Institute, HBKU <br/>
+* Giovanni Da San Martino, Qatar Computing Research Institute, HBKU <br/>
+* Tamer Elsayed, Qatar University <br/>
+* Maram Hasanain, Qatar University <br/>
+* Reem Suwaileh, Qatar University <br/>
 
 Task website: https://sites.google.com/view/clef2019-checkthat/
 **The official rules are published on the website, check them!**
