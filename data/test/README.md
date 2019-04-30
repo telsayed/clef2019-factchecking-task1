@@ -13,9 +13,9 @@ The folder [data](../) contains also a submission_instance_en.zip file that is a
 expect the participants to submit: <br>
 
 * One readme file:						README.txt <br>
-* Seven primary prediction files: 		primary-__filename__.txt <br>
-* Seven contrastive 1 prediction files:	contrastive1-__filename__.txt <br>
-* Seven contrastive 2 prediction files:	contrastive2-__filename__.txt <br>
+* Seven primary prediction files: 		primary___filename__.txt <br>
+* Seven contrastive 1 prediction files:	contrastive1___filename__.txt <br>
+* Seven contrastive 2 prediction files:	contrastive2___filename__.txt <br>
 
 Where __filename__ is in [20151219_3_dem, 20160129_7_gop, 20160311_12_gop, 20180131_state_union, 20181015_60_min, 20190205_trump_state, 20190215_trump_emergency]
 
