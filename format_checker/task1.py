@@ -42,4 +42,6 @@ if __name__ == "__main__":
     parser.add_argument("--pred_file_path", help="The absolute path to the file you want to check.", type=str)
     args = parser.parse_args()
     logging.info("Task 1: Checking file: {}".format(args.pred_file_path))
-    check_format(args.pred_file_path)
+    passed = check_format(args.pred_file_path)
+    if passed:
+        logging.info("Task 1: File passed the format checks.")
