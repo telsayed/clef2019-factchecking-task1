@@ -48,9 +48,10 @@ The primary and the contrastive files should have the same format as those used 
 judgment; one instance per line. From the example 20151219_3_dem.tsv:
 
 > [...] <br>
-> 18	0.880493290088 <br>
-> 19	0.992619629045 <br>
-> 20	0.346526163744 <br>
+> 1	0.9675997183154343 <br>
+> 2	0.549529873725946 <br>
+> 3	0.8507296040568376 <br>
+> 4	0.8339828167219285 <br>
 > [...]
 
 We have implemented some checkers, but it is still the responsibility of the participants to double-check that 
