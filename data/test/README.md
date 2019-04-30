@@ -9,7 +9,7 @@ For instance, 20151219_3_dem.tsv looks like this:
 > 4	RADDATZ	For a rebuttal, for a follow-up, 45 seconds will be allowed. <br>
 > [...]
 
-The folder [data](../) contains also a submission_instance_en.zip file that is an example of what we 
+The folder [data](../) contains also a submission_instance.zip file that is an example of what we 
 expect the participants to submit: <br>
 
 * One readme file:						README.txt <br>
