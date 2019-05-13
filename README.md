@@ -5,7 +5,7 @@ It also contains the _format checker, scorer and baselines_ for the task.
 
 ````
 FCPD corpus for the CLEF-2019 LAB on "Automatic Identification and Verification of Claims"
-Version 1.0: March 12, 2019 (TRIAL)
+Version 2.0: May 13, 2019 (TEST GOLD LABELS RELEASED)
 ````
 
 This file contains the basic information regarding the CLEF2019-CheckThat! Task 1
@@ -35,13 +35,15 @@ __Table of contents:__
 
 * __v1.0 [2019/03/12]__ -  TRIAL data. The training data for task 1 contains 19 fact-checked documents - debates, speeches, press conferences, etc, analysed by factcheck.org. 
 
-## Contents of the Distribution v1.0
+## Contents of the Distribution v2.0
 
 We provide the following files:
 
 - Main folder: [data](data)
   - Subfolder [/training](data/training) <br/>
    Contains all training data released with the version 1.0
+   - Subfolder [/test_annotated](data/test_annotated) <br/>
+   Contains the gold labels for the test datsaset, released with the version 2.0.
     
   * [README.md](README.md) <br/>
     this file
