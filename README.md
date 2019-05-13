@@ -34,6 +34,8 @@ __Table of contents:__
 
 ## Evaluation Results
 
+_Note that, the main evaluation measure is MAP on the primary submission! The teams are ordered according to this score._
+
  | Team Name | submission | MAP | RR | R-P | P@1 | P@3 | P@5 | P@10 | P@20 | P@50 | 
  |-----------|------------|----|----|-----|-----|-----|-----|------|------|------|
  | __Copenhagen__ | __primary__ | __`.1660`<sub>1<sub>__ | __.4176<sub>3<sub>__ | __.1387<sub>4<sub>__ | __.2857<sub>2<sub>__ | __`.2381`<sub>1<sub>__ | __`.2571`<sub>1<sub>__ | __.2286<sub>2<sub>__ | __.1571<sub>2<sub>__ | __.1229<sub>2<sub>__ |
