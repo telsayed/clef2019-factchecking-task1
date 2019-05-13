@@ -17,6 +17,7 @@ The test set will be provided in future versions.
 All changes and updates on these data sets and tools are reported in Section 1 of this document.
 
 __Table of contents:__
+* [Evaluation Results](#evaluation-results)
 * [List of Versions](#list-of-versions)
 * [Contents of the Distribution v1.0](#contents-of-the-distribution-v10)
 * [Subtasks](#subtasks)
@@ -30,6 +31,36 @@ __Table of contents:__
 * [Licensing](#licensing)
 * [Citation](#citation)
 * [Credits](#credits)
+
+## Evaluation Results
+
+ | Team Name | submission | MAP | RR | R-P | P@1 | P@3 | P@5 | P@10 | P@20 | P@50 | 
+ |-----------|------------|----|----|-----|-----|-----|-----|------|------|------|
+ | __Copenhagen__ | __primary__ | __`.1660`<sub>1<sub>__ | __.4176<sub>3<sub>__ | __.1387<sub>4<sub>__ | __.2857<sub>2<sub>__ | __`.2381`<sub>1<sub>__ | __`.2571`<sub>1<sub>__ | __.2286<sub>2<sub>__ | __.1571<sub>2<sub>__ | __.1229<sub>2<sub>__ |
+ |  | contr.-1 | .1496 | .3098 | .1297 | .1429 | .2381 | .2000 | .2000 | .1429 | .1143 | 
+ |  | contr.-2 | .1580 | .2740 | .1622 | .1429 | .1905 | .2286 | .2429 | .1786 | .1200 | 
+ | __TheEarthIsFlat__ | __primary__ | __.1597<sub>2<sub>__ | __.1953<sub>11<sub>__ | __`.2052`<sub>1<sub>__ | __.0000<sub>4<sub>__ | __.0952<sub>3<sub>__ | __.2286<sub>2<sub>__ | __.2143<sub>3<sub>__ | __`.1857`<sub>1<sub>__ | __`.1457`<sub>1<sub>__ |
+ |  | contr.-1 | .1453 | .3158 | .1101 | .2857 | .2381 | .1429 | .1429 | .1357 | .1171 | 
+ |  | contr.-2 | .1821 | .4187 | .1937 | .2857 | .2381 | .2286 | .2286 | .2143 | .1400 | 
+ | __IPIPAN__ | __primary__ | __.1332<sub>3<sub>__ | __.2864<sub>6<sub>__ | __.1481<sub>2<sub>__ | __.1429<sub>3<sub>__ | __.0952<sub>3<sub>__ | __.1429<sub>5<sub>__ | __.1714<sub>5<sub>__ | __.1500<sub>3<sub>__ | __.1171<sub>3<sub>__ |
+ | __Terrier__ | __primary__ | __.1263<sub>4<sub>__ | __.3253<sub>5<sub>__ | __.1088<sub>8<sub>__ | __.2857<sub>2<sub>__ | __`.2381`<sub>1<sub>__ | __.2000<sub>3<sub>__ | __.2000<sub>4<sub>__ | __.1286<sub>6<sub>__ | __.0914<sub>7<sub>__ |
+ | __UAICS__ | __primary__ | __.1234<sub>5<sub>__ | __`.4650`<sub>1<sub>__ | __.1460<sub>3<sub>__ | __`.4286`<sub>1<sub>__ | __`.2381`<sub>1<sub>__ | __.2286<sub>2<sub>__ | __`.2429`<sub>1<sub>__ | __.1429<sub>4<sub>__ | __.0943<sub>6<sub>__ |
+ |  | contr.-1 | .0649 | .2817 | .0655 | .1429 | .2381 | .1429 | .1143 | .0786 | .0343 | 
+ |  | contr.-2 | .0726 | .4492 | .0547 | .4286 | .2857 | .1714 | .1143 | .0643 | .0257 | 
+ | __Factify__ | __primary__ | __.1210<sub>6<sub>__ | __.2285<sub>8<sub>__ | __.1292<sub>5<sub>__ | __.1429<sub>3<sub>__ | __.0952<sub>3<sub>__ | __.1143<sub>6<sub>__ | __.1429<sub>6<sub>__ | __.1429<sub>4<sub>__ | __.1086<sub>4<sub>__ |
+| __JUNLP__ | __primary__ | __.1162<sub>7<sub>__ | __.4419<sub>2<sub>__ | __.1128<sub>7<sub>__ | __.2857<sub>2<sub>__ | __.1905<sub>2<sub>__ | __.1714<sub>4<sub>__ | __.1714<sub>5<sub>__ | __.1286<sub>6<sub>__ | __.1000<sub>5<sub>__ |
+ |  | contr.-1 | .0976 | .3054 | .0814 | .1429 | .2381 | .1429 | .0857 | .0786 | .0771 | 
+ |  | contr.-2 | .1226 | .4465 | .1357 | .2857 | .2381 | .2000 | .1571 | .1286 | .0886 | 
+ | __nlpir01__ | __primary__ | __.1000<sub>8<sub>__ | __.2840<sub>7<sub>__ | __.1063<sub>9<sub>__ | __.1429<sub>3<sub>__ | __`.2381`<sub>1<sub>__ | __.1714<sub>4<sub>__ | __.1000<sub>8<sub>__ | __.1214<sub>7<sub>__ | __.0943<sub>6<sub>__ |
+ |  | contr.-1 | .0966 | .3797 | .0849 | .2857 | .1905 | .2286 | .1429 | .1071 | .0886 | 
+ |  | contr.-2 | .0965 | .3391 | .1129 | .1429 | .2381 | .2286 | .1571 | .1286 | .0943 | 
+ | __TOBB ETU__ | __primary__ | __.0884<sub>9<sub>__ | __.2028<sub>10<sub>__ | __.1150<sub>6<sub>__ | __.0000<sub>4<sub>__ | __.0952<sub>3<sub>__ | __.1429<sub>5<sub>__ | __.1286<sub>7<sub>__ | __.1357<sub>5<sub>__ | __.0829<sub>8<sub>__ |
+ |  | contr.-1 | .0898 | .2013 | .1150 | .0000 | .1429 | .1143 | .1286 | .1429 | .0829 | 
+ |  | contr.-2 | .0913 | .3427 | .1007 | .1429 | .1429 | .1143 | .0714 | .1214 | .0829 | 
+ | __IIT (ISM) Dhanbad, India__ | __primary__ | __.0835<sub>10<sub>__ | __.2238<sub>9<sub>__ | __.0714<sub>11<sub>__ | __.0000<sub>4<sub>__ | __.1905<sub>2<sub>__ | __.1143<sub>6<sub>__ | __.0857<sub>9<sub>__ | __.0857<sub>9<sub>__ | __.0771<sub>9<sub>__ |
+| __é proibido cochilar__ | __primary__ | __.0796<sub>11<sub>__ | __.3514<sub>4<sub>__ | __.0886<sub>10<sub>__ | __.1429<sub>3<sub>__ | __`.2381`<sub>1<sub>__ | __.1429<sub>5<sub>__ | __.1286<sub>7<sub>__ | __.1071<sub>8<sub>__ | __.0714<sub>10<sub>__ |
+ |  | contr.-1 | .1357 | .5414 | .1595 | .4286 | .2381 | .2571 | .2714 | .1643 | .1200 | 
+ | __Fire__ | __primary__ | __.0528<sub>12<sub>__ | __.1365<sub>12<sub>__ | __.0570<sub>12<sub>__ | __.0000<sub>4<sub>__ | __.0476<sub>4<sub>__ | __.0571<sub>7<sub>__ | __.0429<sub>10<sub>__ | __.0500<sub>10<sub>__ | __.0543<sub>11<sub>__ |
 
 ## List of Versions
 
